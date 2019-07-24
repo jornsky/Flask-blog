@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+
+
+
+{% block content %}
+         <div class="content" >
+        <form action="{{ url_for('web.add_post') }}" method="POST">
+{#            <div class="title">#}
+{#                <span>标题</span><input name="title" type="text">#}
+{#            </div>#}
+{#            <div class="contentpost">#}
+{#                <span>正文</span><textarea  rows="15" name="content"></textarea>#}
+{##}
+{#            </div>#}
+
+            <div class="form-group">
+                  <label for="exampleInputPassword1">Title</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" name="title" placeholder="Title">
+           </div>
+
+
+
+             {{ ckeditor.create() }}
+
+            <select class="form-control" name="sel" >
+                     {% for category in  categorys %}
+                         <option >{{ category.name }}</option>
+                     
+                     {% endfor %}
+                     
+            </select>
+
+            <button class="btn btn-primary" type="submit">提交文章</button>
+
+
+
+
+
+        </form>
+
+
+    </div>
+{% endblock %}
+
+{% block js %}
+    {{ super() }}
+    {#            ckeditor js包#}
+            {{ ckeditor.config() }}  <!-- 这时不用设置name参数 -->
+        <script src="//cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
+
+{% endblock %}
+
+

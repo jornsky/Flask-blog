@@ -1,0 +1,136 @@
+            *{
+				margin: 0px;
+				padding: 0px;
+			}
+
+			html{
+				font-size: 61.5%;
+			}
+
+			#login{
+				float: right;
+			}
+
+
+			body{
+				background-color: green;
+			}
+
+			.dropdown{
+				float: left;
+			}
+			.header{
+
+
+				text-align: center;
+				font-size: 1.5rem;
+
+
+				padding-top: 30px;
+
+			}
+
+
+			.first{
+				display: inline-block;
+				width: 50%;
+
+				background-color: #F5F5F5;
+                text-align: left;
+
+
+			}
+
+            #title{
+
+				margin: 5px 3px 5px 30px;
+				float: left;
+				color: #F4A460;
+			}
+
+
+			.tail{
+				text-align: center;
+
+			}
+
+            .item_author{
+                color: #A9A9A9;
+                font-size: 1.5rem;
+
+
+            }
+             .item_time{
+                 color: #A9A9A9;
+                   font-size: 1.5rem;
+
+             }
+
+			.link{
+
+				width: 50%;
+
+				background-color: #F5F5F5;
+			}
+			.status{
+				display: inline-block;
+				width: 50%;
+				background-color: #F5F5F5;
+				text-align: left;
+			}
+
+			#title_font{
+
+				color: green;
+
+			}
+
+
+
+
+			.content{
+				text-align: center;
+
+			}
+
+			.content_hr{
+				height: 1px;
+
+
+			}
+
+			.content_list{
+				display: inline-block;
+				text-align: left;
+				width: 50%;
+				height: 100%;
+				padding :10px 0px 10px 0px;
+				background-color: #F5F5F5;
+
+
+
+			}
+
+			#one{
+
+
+				width: 50%;
+				height: 1px;
+				background-color: #666666;;
+				border:0;
+
+
+			}
+			.posttitle{
+				margin-left: 30px;
+				font-size: 2.1rem;
+
+			}
+			.time{
+				margin-left: 3rem;
+
+			}
+
+
+
+

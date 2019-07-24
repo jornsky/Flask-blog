@@ -1,0 +1,118 @@
+{% extends 'layout.html' %}
+
+{% block css %}
+    {#	<!-- <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}"> -->#}
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/style2.css">
+
+
+{% endblock %}
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    {% block content %}
+        {{ super() }}
+            	<div class="container">
+						<div class="row header">
+									<div class="col-xs-12 col-sm-12 col-md-12 first">
+
+<div  id="title">疾风小站-动漫图社</div>
+											<div class="dropdown">
+												  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+
+												    <span class="caret"></span>
+												  </button>
+												  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+												    <li><a href="{{ url_for('web.index') }}">日常</a></li>
+												    <li><a href="{{ url_for('web.category',name='漫社') }}">动画</a></li>
+												  </ul>
+												</div>
+
+												<div class="login">
+													<a  href="{{ url_for('web.login') }}" id="login" class="btn" >登入</a>
+												</div>
+
+
+
+									</div>
+
+
+
+
+
+
+						</div>
+
+                        <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <hr/>
+                                    </div>
+
+                        </div>
+
+
+
+						<div class="content">
+
+
+				            {% for item in data %}
+                                <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-12 content_list">
+
+
+
+                                                <div class="title">
+                                                                <a href="{{ url_for('web.show_post',id =item.id) }}" class="posttitle">{{ item.title }}</a>
+
+                                                        </div>
+
+
+                                                        <div class="time">
+                                                                <span class="item_time">{{ item.create_time }}</span>     <span class="item_author">{{ item.author }}</span>
+
+                                                        </div>
+
+
+
+                                        </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+
+                                        <hr/>
+                                    </div>
+
+                                </div>
+
+				            {% endfor %}
+
+
+
+
+
+						</div>
+
+
+						<div class="row tail">
+							<div class="col-xs-12 col-sm-12 col-md-12 link">
+
+
+							</div>
+
+							<div class="col-xs-12 col-sm-12 col-md-12 status">
+								<h5 id="title_font">疾风小站-动漫图社 Status:running</h5>
+
+							</div>
+
+
+
+						</div>
+
+	</div>
+
+    {% endblock %}

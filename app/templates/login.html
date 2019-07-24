@@ -1,0 +1,20 @@
+{% extends'layout.html' %}
+
+{% block content %}
+    {{ super() }}
+     <form action="{{ url_for('web.login') }}" method="post">
+
+        <div class="form-group">
+          <label for="">邮件</label>
+          <input type="text" name="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+        </div>
+
+        <div class="form-group">
+          <label for="">密码</label>
+          <input type="text" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+
+
+            <button type="submit" class="btn btn-primary">登入</button>
+            </form>
+{% endblock %}

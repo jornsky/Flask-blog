@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+     {{ super() }}
+    <div class="container">
+
+
+					<div class="navbar navbar-inverse">
+						<div class="navbar-header">
+                                <button class="navbar-toggle" data-toggle="collapse" data-target="#responsive-navbar">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                </button>
+
+
+								<a href="" class="navbar-brand">疾风小站-动漫看图社</a>
+						</div>
+						<div class="collapse navbar-collapse" id="responsive-navbar">
+
+								<ul class="nav navbar-nav">
+									<li> <a href="">日常</a> </li>
+									<li><a href="">看图</a></li>
+								</ul>
+
+								<form action="" class="navbar-form navbar-left">
+										<input type="text" name="搜索" class="form-control">
+										<button type="submit"><span class="glyphicon glyphicon-search"></span></button>
+
+
+								</form>
+
+								<a href="{{ url_for('web.login') }}" class="btn btn-primary btn-sm navbar-right navbar-btn">登入</a>
+					</div>
+
+					</div>
+								<div class="row bg-success page-header">
+										<div id="txt">
+                                            {{ post.content |safe}}
+                                        </div>
+
+
+								</div>
+
+
+				</div>
+
+
+{% endblock %}
